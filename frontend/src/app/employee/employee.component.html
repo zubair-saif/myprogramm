@@ -45,6 +45,8 @@
             </form>
           </div>
           <div class="col s7">
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm"
+              [ngModelOptions]="{standalone: true}">
             <table class="responsive-table highlight">
               <thead>
                 <tr>
@@ -52,9 +54,10 @@
                   <th>Position</th>
                   <th>Office</th>
                   <th></th>
+
                 </tr>
               </thead>
-              <tr *ngFor="let emp of employeeService.employees">
+              <tr *ngFor="let emp of employeeService.employees |filter:searchTerm">
                 <td>{{emp.name}}</td>
                 <td>{{emp.position}}</td>
                 <td>{{emp.office}}</td>
