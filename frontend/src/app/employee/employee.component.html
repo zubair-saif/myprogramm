@@ -31,8 +31,8 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input type="text" name="salary" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary"
-                    placeholder="Salary per annum">
+                  <input type="number" name="salary" #name="ngModel"
+                    [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary per annum">
                   <label>Salary :</label>
                 </div>
               </div>
@@ -45,7 +45,7 @@
             </form>
           </div>
           <div class="col s7">
-            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTerm"
+            <input type="text" class="input-field" placeholder="Search" [(ngModel)]="searchTerm"
               [ngModelOptions]="{standalone: true}">
             <table class="responsive-table highlight">
               <thead>
@@ -53,6 +53,7 @@
                   <th>Name</th>
                   <th>Position</th>
                   <th>Office</th>
+                  <th>salary</th>
                   <th></th>
 
                 </tr>
@@ -61,6 +62,8 @@
                 <td>{{emp.name}}</td>
                 <td>{{emp.position}}</td>
                 <td>{{emp.office}}</td>
+                <td>{{emp.salary}}</td>
+
                 <td>
                   <a class="action-btn" (click)="onEdit(emp)">
                     <i class="material-icons">edit</i>
