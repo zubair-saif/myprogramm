@@ -13,7 +13,7 @@ declare var M: any;
   providers: [EmployeeService]
 })
 export class EmployeeComponent implements OnInit {
-  searchTerm: string;
+  searchTerm!: string;
 
   // constructor(private employeeService: EmployeeService) { }
   constructor(public employeeService: EmployeeService) { }

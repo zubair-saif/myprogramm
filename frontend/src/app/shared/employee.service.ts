@@ -7,8 +7,8 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class EmployeeService {
-  selectedEmployee: Employee;
-  employees: Employee[];
+  selectedEmployee!: Employee;
+  employees!: Employee[];
   readonly baseURL = 'http://localhost:3000/employees';
 
   constructor(private http: HttpClient) { }
